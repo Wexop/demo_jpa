@@ -14,12 +14,11 @@ public class TestJpa {
 
         EntityTransaction et = em.getTransaction();
         et.begin();
-        em.persist(new Livre("ELMER", "David McKee"));
-
-
+        em.merge(new Livre(5, "Du plaisir dans la cuisine", "Jean-Pierre Coffe"));
         et.commit(); // ou et.rollback()
+        
 
-        Livre livre = em.find(Livre.class, 6);
+        Livre livre = em.find(Livre.class, 5);
         if(livre != null) {
             System.out.println(livre.toString());
         }
