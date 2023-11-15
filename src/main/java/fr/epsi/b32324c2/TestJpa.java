@@ -11,7 +11,7 @@ public class TestJpa {
         EntityManager em = emf.createEntityManager();
 
 
-        TypedQuery<Livre> query2 = em.createQuery("select l from Livre l where l.titre ='ELMER'", Livre.class);
+        TypedQuery<Livre> query2 = em.createQuery("select l from Livre l where l.auteur ='Jules Verne'", Livre.class);
         Livre h2 = query2.getResultList().get(0);
 
         if(h2 != null) {
