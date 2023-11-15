@@ -1,17 +1,17 @@
 package fr.epsi.b32324c2;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name = "FOURNISSEUR")
 public class TestJpa {
 
-    @Id
-    private int ID;
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu-a1");
+        EntityManager entityManager = emf.createEntityManager();
 
-    @Column(name = "NOM")
-    private String nom;
+        System.out.println(entityManager.isOpen()); // se connecte à la bdd
+
+        entityManager.close();
+        emf.close();
+
+    }
 }

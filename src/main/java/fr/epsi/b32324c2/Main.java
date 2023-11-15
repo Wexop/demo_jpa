@@ -8,13 +8,7 @@ import javax.persistence.Persistence;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu-a1");
-        EntityManager entityManager = emf.createEntityManager();
 
-        System.out.println(entityManager); // se connecte à la bdd
-
-        entityManager.close();
-        emf.close();
 
     }
 }
