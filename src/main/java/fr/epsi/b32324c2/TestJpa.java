@@ -1,5 +1,7 @@
 package fr.epsi.b32324c2;
 
+import fr.epsi.b32324c2.entites.Livre;
+
 import javax.persistence.*;
 
 public class TestJpa {
@@ -8,7 +10,11 @@ public class TestJpa {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu-a1");
         EntityManager entityManager = emf.createEntityManager();
 
-        System.out.println(entityManager.isOpen()); // se connecte à la bdd
+        Livre livre = entityManager.find(Livre.class, 1);
+        if(livre != null) {
+            System.out.println(livre.toString());
+        }
+
 
         entityManager.close();
         emf.close();
