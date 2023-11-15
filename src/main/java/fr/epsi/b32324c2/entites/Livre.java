@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class Livre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private int id;
 
     @Column(name = "TITRE")
@@ -18,5 +19,20 @@ public class Livre {
     @Override
     public String toString() {
         return String.format("{ id: %s, titre: %s, auteur: %s }", this.id, this.titre, this.auteur);
+    }
+
+    public Livre() {
+
+    }
+
+    public Livre(String titre, String auteur) {
+        this.titre = titre;
+        this.auteur = auteur;
+    }
+
+    public Livre(int id,String titre, String auteur) {
+        this.titre = titre;
+        this.auteur = auteur;
+        this.id = id;
     }
 }

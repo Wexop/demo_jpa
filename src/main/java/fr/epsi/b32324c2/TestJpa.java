@@ -8,15 +8,24 @@ public class TestJpa {
 
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu-a1");
-        EntityManager entityManager = emf.createEntityManager();
+        EntityManager em = emf.createEntityManager();
 
-        Livre livre = entityManager.find(Livre.class, 1);
+
+
+        EntityTransaction et = em.getTransaction();
+        et.begin();
+        em.persist(new Livre("ELMER", "David McKee"));
+
+
+        et.commit(); // ou et.rollback()
+
+        Livre livre = em.find(Livre.class, 6);
         if(livre != null) {
             System.out.println(livre.toString());
         }
 
 
-        entityManager.close();
+        em.close();
         emf.close();
 
     }
