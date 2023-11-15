@@ -6,11 +6,11 @@
   <persistence-unit name="pu-a1">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/compta"/>
-      <property name="javax.persistence.jdbc.user" value="root"/>
-      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://b199aypbzafpieoe4cdl-mysql.services.clever-cloud.com:3306/b199aypbzafpieoe4cdl"/>
+      <property name="javax.persistence.jdbc.user" value="uhxf8srz3cithegr"/>
+      <property name="javax.persistence.jdbc.password" value="TZhJjsi2BdRz0qKd0cjJ"/>
       <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
     </properties>
-
   </persistence-unit>
 </persistence>
