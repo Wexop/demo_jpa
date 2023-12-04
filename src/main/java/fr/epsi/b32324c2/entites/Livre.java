@@ -25,6 +25,10 @@ public class Livre {
 
     }
 
+    public Livre(int id) {
+        this.id = id;
+    }
+
     public Livre(String titre, String auteur) {
         this.titre = titre;
         this.auteur = auteur;

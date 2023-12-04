@@ -10,13 +10,8 @@ public class TestJpa {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu-a1");
         EntityManager em = emf.createEntityManager();
 
-
-        TypedQuery<Livre> query2 = em.createQuery("select l from Livre l where l.auteur ='Jules Verne'", Livre.class);
-        Livre h2 = query2.getResultList().get(0);
-
-        if(h2 != null) {
-            System.out.println(h2.toString());
-        }
+        Livre livre = new Livre(7);
+        em.remove(livre);
 
 
         em.close();
