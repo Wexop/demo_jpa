@@ -13,13 +13,23 @@ public class TestJpa {
 
         //select auteur
 
-/*        TypedQuery<Livre> query2 = em.createQuery("select l from Livre l where l.auteur ='Jules Verne'", Livre.class);
-        Livre h2 = query2.getResultList().get(0);*/
-        
+        TypedQuery<Livre> query2 = em.createQuery("select l from Livre l where l.auteur ='Jules Verne'", Livre.class);
+        Livre h2 = query2.getResultList().get(0);
+
+
+        if(h2 != null) {
+            System.out.println(h2.toString());
+        }
+
         //select title
 
-/*        TypedQuery<Livre> query2 = em.createQuery("select l from Livre l where l.titre ='ELMER'", Livre.class);
-        Livre h2 = query2.getResultList().get(0);*/
+        TypedQuery<Livre> query3 = em.createQuery("select l from Livre l where l.titre ='ELMER'", Livre.class);
+        Livre h3 = query3.getResultList().get(0);
+
+
+        if(h3 != null) {
+            System.out.println(h2.toString());
+        }
 
         //update
 
