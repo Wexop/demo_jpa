@@ -1,6 +1,7 @@
 package fr.epsi.b32324c2.entites;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "livre")
@@ -15,6 +16,9 @@ public class Livre {
 
     @Column(name = "AUTEUR")
     String auteur;
+
+    @ManyToMany(mappedBy = "livres")
+    Set<Emprunt> emprunts;
 
     @Override
     public String toString() {
