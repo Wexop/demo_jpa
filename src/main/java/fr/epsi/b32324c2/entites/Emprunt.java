@@ -39,9 +39,10 @@ public class Emprunt {
                 ", dateFin=" + dateFin +
                 ", delai=" + delai +
                 ", livres=" + livres +
-                ", client=" + client +
                 '}';
     }
+
+
 
     public Emprunt() {
     }

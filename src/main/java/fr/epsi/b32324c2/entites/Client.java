@@ -50,6 +50,7 @@ public class Client {
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
+                ", emprunts=" + emprunts +
                 '}';
     }
 

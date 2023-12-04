@@ -1,5 +1,6 @@
 package fr.epsi.b32324c2;
 
+import fr.epsi.b32324c2.entites.Client;
 import fr.epsi.b32324c2.entites.Emprunt;
 import fr.epsi.b32324c2.entites.Livre;
 
@@ -15,8 +16,10 @@ public class TestBibliotheque {
         EntityManager em = emf.createEntityManager();
 
         Emprunt h2 = em.find(Emprunt.class, 1);
-
         System.out.println(h2.toString());
+
+        Client client = em.find(Client.class, 1);
+        System.out.println(client.toString());
 
 
         em.close();
