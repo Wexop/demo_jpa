@@ -37,6 +37,14 @@ public class Operation {
         this.compte = compte;
     }
 
+    public Operation(int id, String motif, Double montant, LocalDateTime date, Compte compte) {
+        this.id = id;
+        this.motif = motif;
+        this.montant = montant;
+        this.date = date;
+        this.compte = compte;
+    }
+
     public String getMotif() {
         return motif;
     }

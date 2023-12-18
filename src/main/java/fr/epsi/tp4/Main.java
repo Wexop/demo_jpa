@@ -27,18 +27,24 @@ public class Main {
 
         //CREATE A CLIENT
         Banque banque = em.find(Banque.class, 1);
-        banque.toString();
         em.persist(new Client("Michel", "Bernard", LocalDate.now(), banque, new Adresse(30, "rue des noisettes", 44000 ,"NoisetteVille")));
 
         //CREATE A COMPTE
         Client client = em.find(Client.class, 1);
-        Set<Client> set =  new HashSet<Client>() ;
-        set.add(client);
-        em.persist(new Compte("1234", 20000.0,set ));
+        em.persist(new Compte("1234", 20000.0, Set.of(client) ));
 
         //CREATE A OPERATION
         Compte compte = em.find(Compte.class, 1);
         em.persist(new Operation("Achat de noisette", 20.00, LocalDateTime.now(), compte ));
+
+        //CREATE A LIVRET A
+        em.persist(new LivretA("Livret A SUPER", 100.0, Set.of(client), 20.0 ));
+
+        //CREATE A ASSURANCE VIE
+        em.persist(new AssuranceVie("ASSURANCE VIE SUPER", 670.0, Set.of(client), 20.0, LocalDate.now() ));
+
+        //CREATE A VIREMENT
+        em.persist(new Virement("Virement noisette", 1230.30 ,LocalDateTime.now(), compte, "Michel"));
 
 
 

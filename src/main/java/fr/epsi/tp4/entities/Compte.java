@@ -40,10 +40,11 @@ public class Compte {
         this.solde = solde;
     }
 
-    public Compte(int id, String numero, Double solde) {
+    public Compte(int id, String numero, Double solde, Set<Client> clients) {
         this.id = id;
         this.numero = numero;
         this.solde = solde;
+        this.clients = clients;
     }
 
     public Compte(String numero, Double solde, Set<Client> clients) {
