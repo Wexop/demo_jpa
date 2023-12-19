@@ -7,7 +7,6 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
 public class AssuranceVie extends Compte {
     private Double taux;
     private LocalDate dateFin;

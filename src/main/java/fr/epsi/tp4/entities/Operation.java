@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@DiscriminatorColumn(name = "TYPE")
 public class Operation {
 
     @Id
