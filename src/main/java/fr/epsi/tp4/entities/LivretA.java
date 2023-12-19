@@ -19,4 +19,13 @@ public class LivretA extends Compte {
         super(id, numero, solde, clients);
         this.taux = taux;
     }
+
+    @Override
+    public String toString() {
+        return "LivretA{" +
+                "taux=" + taux +
+                ", operations=" + operations +
+                ", clients=" + clients +
+                '}';
+    }
 }
